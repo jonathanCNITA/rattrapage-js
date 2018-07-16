@@ -44,14 +44,16 @@ Voici quelques fonctionnalités que nous souhaitons :
 
 ### Mise en place d'une page
 
-- [ ] Créez une simple page HTML avec un titre.
-- [ ] Ajoutez les libraries jQuery et Bootstrap qui nous serviront pour la suite du développement.
+- [x] Créez une simple page HTML avec un titre.
+- [x] Ajoutez les libraries jQuery et Bootstrap qui nous serviront pour la suite du développement.
 
 Une fois que tout fonctionne, faites un premier commit ( vous aurez sûrement besoin d'initialiser le repository git ). Quelle est la commande à utiliser ? 🤔
 
+la commande à utiliser est ``git add nomDuFichier.txt`  et ensuite `git commit -m "message du commit"`
+
 ### Récupération des données et affichage simple.
 
-- [ ] Créez dans votre fichier Javascript une variable dont la valeur correspond au tableau suivant :
+- [x] Créez dans votre fichier Javascript une variable dont la valeur correspond au tableau suivant :
 
 <details>
  <summary>Exemple de données ( cliquer pour dérouler )</summary>
@@ -253,7 +255,7 @@ Une fois que tout fonctionne, faites un premier commit ( vous aurez sûrement be
 
 Est ce que c'est mieux de déclarer la variable avec `let` ou `const` 🤔 ?
 *Votre réponse :*
-
+LA variable est déclarée en const car je ne souhaite pas la modifier et éviter les effets de bordS.
 ## Afficher dans une table bootstrap avec JQuery.
 
 Nous voulons afficher une table avec sur chaque ligne les informations d'un projet :
@@ -263,9 +265,9 @@ Nous voulons afficher une table avec sur chaque ligne les informations d'un proj
 - Le statut ( actif ou non ).
 - La date de création.
 
-- [ ] Ajoutez dans votre document html une table avec une en tête comprenant ces 4 colonnes.
+- [x] Ajoutez dans votre document html une table avec une en tête comprenant ces 4 colonnes.
 
-- [ ] Enfin, affichez autant de lignes dans la table qu'il y a d'éléments dans votre tableau.
+- [x] Enfin, affichez autant de lignes dans la table qu'il y a d'éléments dans votre tableau.
 
 Voici un exemple de résultat :
 
@@ -289,11 +291,11 @@ function research() {
 }
 ```
 
-- [ ] Complétez la fonction, vérifiez notamment qu'il y a 5 projets commençant par la lettre `P`, mais un seul commençant par les lettres `PO`.
+- [x] Complétez la fonction, vérifiez notamment qu'il y a 5 projets commençant par la lettre `P`, mais un seul commençant par les lettres `PO`.
 
-- [ ] Ajoutez un input au dessus du tableau et faites en sorte que à chaque fois que l'utilisateur tape une lettre, on lance la fonction de recherche et on met à jour la vue.
+- [x] Ajoutez un input au dessus du tableau et faites en sorte que à chaque fois que l'utilisateur tape une lettre, on lance la fonction de recherche et on met à jour la vue.
 
-- [ ] Les noms des projets étant en majuscule, convertissez la saisie de l'utilisateur avant de lancer votre fonction de recherche.
+- [x] Les noms des projets étant en majuscule, convertissez la saisie de l'utilisateur avant de lancer votre fonction de recherche.
 
 Voici un exemple d'interface auquelle vous [pourriez parvenir](http://recordit.co/nFSyim9OGw)
 
