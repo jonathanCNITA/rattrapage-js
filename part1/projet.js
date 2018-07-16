@@ -198,7 +198,7 @@ $(function(){
         for(let i = 0; i < datas.length; i++) {
             $('#datas').append(`<tr><td><img src=${datas[i].picture}></td>
             <td>${datas[i].name}</td>
-            <td>${datas[i].isActive}</td>
+            <td>${datas[i].isActive ? 'OK': 'KO'}</td>
             <td>${datas[i].creation}</td></tr>`);
         }
     }
