@@ -1,6 +1,6 @@
 console.log('Projet js works!!!');
 
-let datas = [
+const datas = [
     {
       "_id": "5b3e3da860e7c6eeb88e3ceb",
       "isActive": true,
@@ -191,3 +191,17 @@ let datas = [
       "creation": "Tue Feb 25 1975 21:31:07 GMT+0100 (Central European Standard Time)"
     }
   ]
+
+$(function(){
+
+    function showDatas() {
+        for(let i = 0; i < datas.length; i++) {
+            $('#datas').append(`<tr><td><img src=${datas[i].picture}></td>
+            <td>${datas[i].name}</td>
+            <td>${datas[i].isActive}</td>
+            <td>${datas[i].creation}</td></tr>`);
+        }
+    }
+
+    showDatas();
+});
