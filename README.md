@@ -280,8 +280,8 @@ Nous voulons pouvoir chercher dans la table un projet par son nom.
 
 Avant de se pencher sur l'interface écrivons la fonction de recherche.
 
-* Combien la fonction prend-elle de paramètres ?
-* De quel type sera le résultat retourné ?
+* Combien la fonction prend-elle de paramètres ? 2
+* De quel type sera le résultat retourné ? array of object
 
 Avant d'écrire du code, prenez un papier et un crayon pour écrire l'algorithme.
 
@@ -313,7 +313,7 @@ Voici un exemple d'interface à laquelle vous [pourriez parvenir](http://recordi
 
 ## Ajouter un nouveau projet.
 
-- [ ] Faites un formulaire d'ajout d'un projet, je vous propose pour cela d'utiliser les [fenêtres modales de bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) afin d'avoir le formulaire dans une modale.
+- [x] Faites un formulaire d'ajout d'un projet, je vous propose pour cela d'utiliser les [fenêtres modales de bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) afin d'avoir le formulaire dans une modale.
 
 Voici un exemple de résultats :
 
