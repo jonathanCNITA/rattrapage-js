@@ -193,32 +193,58 @@ const datas = [
   ]
 
 
+//-----------------------------
+
+cleanDates(datas);
+
 //----------------------------- JQUERY
 
 $(function(){
 
-  function showDatas(datas) {
-    $("#datas > tbody").html("");
-    for(let i = 0; i < datas.length; i++) {
-      $('#datas').append(`<tr><td><img src=${datas[i].picture}></td>
-      <td>${datas[i].name}</td>
-      <td>${datas[i].isActive ? 'OK': 'KO'}</td>
-      <td>${datas[i].creation}</td></tr>`);
+  function showDatas(dataTab) {
+    $("#datas > tbody").empty();
+    for(let i = 0; i < dataTab.length; i++) {
+      $('#datas').append(`<tr><td><img src=${dataTab[i].picture}></td>
+      <td>${dataTab[i].name}</td>
+      <td>${dataTab[i].isActive ? 'OK': 'KO'}</td>
+      <td>${dataTab[i].creation}</td></tr>`);
     }
   }
 
   showDatas(datas);
 
   $('#searchBar').keyup(function(){
-    const toMatch =  $(this)[0].value;
-    let matched =  matchedDatas(datas, toMatch);
+    const toMatch =  $(this).val();
+    const matched =  matchedDatas(datas, toMatch);
     showDatas(matched);
   });
+
+  $('#sortByCreation').click(function() {
+    sortByDate(datas);
+    const toMatch = $('#searchBar').val();
+    const matched =  matchedDatas(datas, toMatch);
+    showDatas(matched);
+  });
+
 });
 
 
 //----------------------------- FUNCTIONS
 
+function cleanDates(dataTab) {
+  for (let i = 0; i < dataTab.length; i++) {
+    dataTab[i].creation = new Date(dataTab[i].creation);
+  }
+}
+
+
 function matchedDatas(list, toMatch) {
-  return list.filter( floux => floux.name.startsWith(toMatch.toUpperCase()));
+  return list.filter( data => data.name.startsWith(toMatch.toUpperCase()));
+}
+
+
+function sortByDate(list) {
+  list.sort(function(a,b){
+    return b.creation - a.creation;
+  });
 }
