@@ -301,7 +301,7 @@ Voici un exemple d'interface auquelle vous [pourriez parvenir](http://recordit.c
 
 ## Trier par date croissante et/ou décroissante.
 
-- [ ] Nous allons ajouter une icone dans le header de notre table, lorsque nous cliquerons dessus le tableau sera trié du plus récent au plus ancien.
+- [x] Nous allons ajouter une icone dans le header de notre table, lorsque nous cliquerons dessus le tableau sera trié du plus récent au plus ancien.
 
 Vous pouvez par exemple utiliser la très connue librarie [Font Awesome](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)
 
@@ -309,7 +309,7 @@ La fonction [sort](https://developer.mozilla.org/fr/docs/Web/JavaScript/Referenc
 
 Voici un exemple d'interface à laquelle vous [pourriez parvenir](http://recordit.co/Uvb85D470w)
 
-- [ ] Autre idée : trier par ordre alphabétique les noms des projets.
+- [x] Autre idée : trier par ordre alphabétique les noms des projets.
 
 ## Ajouter un nouveau projet.
 

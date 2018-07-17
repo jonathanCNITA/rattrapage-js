@@ -201,6 +201,8 @@ cleanDates(datas);
 
 $(function(){
 
+  showDatas(datas);
+
   function showDatas(dataTab) {
     $("#datas > tbody").empty();
     for(let i = 0; i < dataTab.length; i++) {
@@ -211,18 +213,24 @@ $(function(){
     }
   }
 
-  showDatas(datas);
 
   $('#searchBar').keyup(function(){
-    const toMatch =  $(this).val();
-    const matched =  matchedDatas(datas, toMatch);
+    const toMatch = $(this).val();
+    const matched = matchedDatas(datas, toMatch);
     showDatas(matched);
   });
 
   $('#sortByCreation').click(function() {
     sortByDate(datas);
     const toMatch = $('#searchBar').val();
-    const matched =  matchedDatas(datas, toMatch);
+    const matched = matchedDatas(datas, toMatch);
+    showDatas(matched);
+  });
+
+  $('#sortByName').click(function() {
+    sortByName(datas);
+    const toMatch = $('#searchBar').val();
+    const matched = matchedDatas(datas, toMatch);
     showDatas(matched);
   });
 
@@ -244,7 +252,29 @@ function matchedDatas(list, toMatch) {
 
 
 function sortByDate(list) {
-  list.sort(function(a,b){
-    return b.creation - a.creation;
-  });
+  list.sort((a,b) => b.creation - a.creation);
+  // list.sort(function(a,b){
+  //   return b.creation - a.creation;
+  // });
+}
+
+
+function sortByName(list) {
+  list.sort((a,b) => a.name > b.name ? 1 : b.name > a.name? -1 : 0);
+  // list.sort(function(a, b) {
+  //   if(a.name > b.name) {
+  //     return 1;
+  //   } else if(b.name > a.name ) {
+  //     return -1;
+  //   }
+  //   return 0;
+  // });
+}
+
+
+function sortBy(list, param) {
+  list.sort((a,b) => b[param] - a[param]);
+  // list.sort(function(a,b){
+  //   return b[param] - a[param];
+  // });
 }
