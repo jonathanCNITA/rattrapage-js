@@ -239,18 +239,20 @@ $(function () {
   $('#addProject').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var modal = $(this);
+    $('input[name="project-name"]').val('');
   })
 
   $('#addProjectToList').click(function () {
-    const name = $('input[name="project-name"]').val();
+    const name = $('input[name="project-name"]').val().toUpperCase();
     const picture = $('input[name="project-picture"]').val();
     datas.push({
-      "_id": "5b3e3da8408a1a197944bb07",
+      "_id": "randomId",
       "isActive": false,
       "picture": picture,
       "name": name,
-      "creation": "Sun Jun 24 1990 03:34:24 GMT+0200 (Central European Summer Time)"
+      "creation": new Date()
     })
+    showDatas(datas);
   });
 
 });
@@ -280,8 +282,10 @@ function sortByDate(list) {
 
 
 function sortByName(list) {
-  // list.sort((a,b) => a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
-  nameSorted ? list.sort((a, b) => a.name > b.name ? 1 : -1) : list.sort((a, b) => b.name > a.name ? 1 : -1);
+  list.sort((a,b) => a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
+  if(nameSorted) {
+    list.reverse();
+  }
   nameSorted = !nameSorted;
   // list.sort(function(a, b) {
   //   if(a.name > b.name) {
@@ -306,11 +310,4 @@ function toto() {
   console.log('form submited');
   // const projectName = document.forms["addProject"]["project-name"].value;
   // return false;
-}
-
-function generateId() {
-  let id = '';
-  for (let i = 0; i < 24; i++) {
-    
-  }
 }
